@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    
+</head>
+<body>
+     
+    
+  
+    <!-- Part I -->
+    <h1> P w K Tech </h1>
+    <p>P w K Tech offers a variety of computer including smart glasses, smartphones and tables.</p>
+    <hr>
+
+    <!--  Part II-->
+    <h1>Mexican Peso to US dollar converter</h1>
+    <hr>
+	<label>
+        Enter Mexican Peso: 
+        <br>
+    </label>
+
+	<input type="number" id="mxn" onchange="convertCurrency()">
+	<hr>
+	<p>USD: <span id="usd"></span></p>
+
+	<script>
+		function convertCurrency() {
+			const mxnAmount = document.getElementById("mxn").value;
+			const usdAmount = mxnAmount * 0.053;
+			document.getElementById("usd").innerHTML = usdAmount.toFixed(2);
+		}
+	</script>
+    <hr>
+
+    <!-- Part III -->
+  <!--  if statement-->
+  <h2> Device Selection </h2>
+  <form>
+    <input type="checkbox" id="item1" value="299.00" />
+    <label>Smart Glasses ($299.00)</label>
+    <input type="checkbox" id="option2" value="399.00" />
+    <label>Smartphone ($399.00)</label>
+    <input type="checkbox" id="option3" value="499.00" />
+    <label></label>Tables ($499.00) </label>
+    <input type="button" value="Submit" id="sButton"
+ onclick="lunchTotal()"/>
+     </body><form action="">
+
+     </form>
+
+    <p id="total">   </p>
+
+    Your order total is $<span id="total"></span>
+    
+      
+
+    
